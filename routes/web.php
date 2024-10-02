@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Home;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/refresh-csrf', function () {
+    return response()->json(['csrf_token' => csrf_token()]);
+});
+
+##Nivel de acceso de usuario
+Route::group(['middleware' => 'guest'], function(){
+    Route::get('/', Home::class);
+});
+
+Route::group(['middleware' => 'auth'], function(){
+   
 });
