@@ -10,7 +10,8 @@ class Rol extends Model
     use HasFactory;
     protected $fillable = ['name', 'description'];
 
-    public function user(){
-        return $this->belongsTo(User::class, 'rol', 'id');
+    public function users()
+    {
+        return $this->hasMany(User::class, 'rol', 'id');
     }
 }
