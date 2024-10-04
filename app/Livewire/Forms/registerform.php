@@ -12,7 +12,7 @@ class registerform extends Form
 {
     //
 
-    #[Validate('required|min:6')]
+    #[Validate('required|max:255')]
     public $name;
 
     #[Validate('required|email|unique:users,email')]
@@ -25,12 +25,12 @@ class registerform extends Form
     public $password_confirmation;
 
     #[Validate('required')]
-    public $idioma_preferencia;
+    public $idioma_preferencia = 'es';
 
     public $messages = [
         'name.required' => 'Por favor ingrese su nombre',
         'email.unique' => 'El email ya está en uso',
-        'name.min' => 'El nombre debe tener al menos 6 caracteres',
+        'name.max' => 'El nombre no puede tener más de 255 caracteres',
         'email.required' => 'Por favor ingrese su email',
         'password.required' => 'Por favor ingrese su contraseña',
         'password.min' => 'La contraseña debe tener al menos 6 caracteres',

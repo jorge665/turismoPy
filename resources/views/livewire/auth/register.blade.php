@@ -1,104 +1,102 @@
 <div>
     {{-- Do your work, then step back. --}}
-    <section class=" vh-100" style="background-color: #eee;">
-        <div class="container h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100 my-2">
-                <div class="col-lg-12 col-xl-11">
-                    <div class="card text-black" style="border-radius: 25px;">
-                        <div class="card-body p-md-5">
-                            <div class="row justify-content-center">
-                                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+    <section class="vh-100">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-8 col-lg-6 col-xl-5">
+                    <div class="card shadow-lg" style="border-radius: 15px;">
+                        <div class="card-body p-3">
+                            <h3 class="text-center mb-4">Registro</h3>
+                            <form wire:submit='register'>
 
-                                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Registro</p>
-
-                                    <form wire:submit='register' class="mx-1 mx-md-4">
-
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                                            <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                                                <input wire:model='form.name' type="text" id="name" class="form-control" />
-                                                <label class="form-label" for="name">Nombre</label>
-                                            </div>
-                                        </div>
-
-                                        @error('form.name')
-                                            <div class="alert alert-danger">{{ $message }}</div>
-                                        @enderror
-
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                            <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                                                <input wire:model='form.email' type="email" id="email" class="form-control" />
-                                                <label class="form-label" for="email">Email</label>
-                                            </div>
-                                        </div>
-
-                                        @error('form.email')
-                                            <div class="alert alert-danger">{{ $message }}</div>
-                                        @enderror
-
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                                            <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                                                <input wire:model='form.password' type="password" id="password" class="form-control" />
-                                                <label class="form-label" for="password">Password</label>
-                                            </div>
-                                        </div>
-
-                                        @error('form.password')
-                                            <div class="alert alert-danger">{{ $message }}</div>
-                                        @enderror
-
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                                            <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                                                <input wire:model='form.password_confirmation' type="password" id="password_confirmation" class="form-control" />
-                                                <label class="form-label" for="password_confirmation">Repetir tu
-                                                    password</label>
-                                            </div>
-                                        </div>
-
-                                        @error('form.password_confirmation')
-                                            <div class="alert alert-danger">{{ $message }}</div>
-                                        @enderror
-
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                                            <div class="form-outline flex-fill mb-0">
-                                                <select wire:model='form.idioma_preferencia' class="form-select form-select-lg" name="idioma_preferencia" id="idioma_preferencia">
-                                                    <option selected>Selecciona uno</option>
-                                                    <option value="es">Español</option>
-                                                    <option value="eng">Ingles</option>
-                                                </select>
-                                                <label for="idioma_preferencia" class="form-label">Idioma de Preferencia</label>
-                                            </div>
-                                        </div>
-
-                                        @error('form.idioma_preferencia')
-                                            <div class="alert alert-danger">{{ $message }}</div>
-                                        @enderror
-
-                                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                            <button type="submit" data-mdb-button-init data-mdb-ripple-init
-                                                class="btn btn-primary btn-lg">Registrar</button>
-                                        </div>
-
-                                        @error('form.error')
-                                            <div class="alert alert-danger">{{ $message }}</div>
-                                        @enderror
-
-                                    </form>
-
+                                <!-- Nombre -->
+                                <div class="mb-4">
+                                    <label for="name" class="form-label">Nombre</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                        <input wire:model='form.name' type="text" id="name" class="form-control" placeholder="Ingresa tu nombre" />
+                                    </div>
+                                    @error('form.name')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
                                 </div>
-                                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2 ">
 
-                                    <img src="https://www.abc.com.py/resizer/v2/64P5UNFGFBCR3MTUCLW43FCMGA.jpg?auth=db8dab9191397e2e501664e44a7f70b925f05d2ef86a7b66e0a36309e71f1b8b&width=770&smart=true"
-                                        class="img-fluid border rounded" alt="Sample image">
-
+                                <!-- Email -->
+                                <div class="mb-4">
+                                    <label for="email" class="form-label">Email</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                        <input wire:model='form.email' type="email" id="email" class="form-control" placeholder="Ingresa tu email" />
+                                    </div>
+                                    @error('form.email')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
                                 </div>
-                            </div>
+
+                                <!-- Password -->
+                                <div class="mb-4">
+                                    <label for="password" class="form-label">Contraseña</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                        <input wire:model='form.password' type="password" id="password" class="form-control" placeholder="Ingresa tu contraseña" />
+                                    </div>
+                                    @error('form.password')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <!-- Confirmar Password -->
+                                <div class="mb-4">
+                                    <label for="password_confirmation" class="form-label">Repetir tu contraseña</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                        <input wire:model='form.password_confirmation' type="password" id="password_confirmation" class="form-control" placeholder="Repite tu contraseña" />
+                                    </div>
+                                    @error('form.password_confirmation')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <!-- Idioma de Preferencia -->
+                                <div class="mb-4">
+                                    <label for="idioma_preferencia" class="form-label">Idioma de Preferencia</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-language"></i></span>
+                                        <select wire:model='form.idioma_preferencia' class="form-select" id="idioma_preferencia">
+                                            <option value="" disabled selected>Selecciona uno</option>
+                                            <option value="es">Español</option>
+                                            <option value="eng">Inglés</option>
+                                        </select>
+                                    </div>
+                                    @error('form.idioma_preferencia')
+                                        <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <!-- Botón de Registro -->
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-success btn-lg">Registrar</button>
+                                </div>
+
+                                <!-- Link a Login -->
+                                <div class="text-center mt-3">
+                                    <p class="text-muted
+                                    ">¿Ya tienes una cuenta? <a href="{{ route('login') }}" class="text-dark">Inicia Sesión</a></p>
+                                </div>
+
+                                <!-- Error General -->
+                                @error('form.error')
+                                    <div class="alert alert-danger mt-3">{{ $message }}</div>
+                                @enderror
+
+                            </form>
                         </div>
                     </div>
+                </div>
+                <!-- Imagen Lateral (Solo en pantallas grandes) -->
+                <div class="col-lg-6 d-none d-lg-block">
+                    <img src="https://www.abc.com.py/resizer/v2/64P5UNFGFBCR3MTUCLW43FCMGA.jpg?auth=db8dab9191397e2e501664e44a7f70b925f05d2ef86a7b66e0a36309e71f1b8b&width=770&smart=true"
+                        class="img-fluid rounded shadow-lg" alt="Imagen de Registro" style="filter: brightness(90%);">
                 </div>
             </div>
         </div>

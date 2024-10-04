@@ -27,7 +27,7 @@
 
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-8">
-                            <h2 class="fw-bold mb-5">Sign up now</h2>
+                            <h2 class="fw-bold mb-5">Iniciar Sesión</h2>
                             <form wire:submit='submit'>
 
                                 <!-- Email input -->
@@ -48,7 +48,7 @@
                                 <div data-mdb-input-init class="form-outline mb-4">
                                     <input wire:model='form.password' type="password" id="password"
                                         class="form-control" />
-                                    <label class="form-label" for="password">Password</label>
+                                    <label class="form-label" for="password">Contraseña</label>
                                 </div>
 
                                 @error('form.password')
@@ -64,17 +64,23 @@
                                     <input class="form-check-input me-2" wire:model='form.remember' type="checkbox"
                                         value="" id="remember" checked />
                                     <label class="form-check-label" for="remember">
-                                        Remember
+                                        Recordar
                                     </label>
                                 </div>
 
                                 <!-- Submit button -->
                                 <button type="submit" data-mdb-button-init data-mdb-ripple-init
                                     class="btn btn-success btn-block mb-4">
-                                    Sign up
+                                    Ingresar
                                 </button>
-                                <br>
-                                <a href="{{ route('password.request') }}">¿Olvidaste tu contraseña?</a>
+                                <div class="text-center mt-3">
+                                    <p class="text-muted
+                                    ">¿No tienes una cuenta? <a href="{{ route('register') }}" class="text-dark">Registro</a></p>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <p class="text-muted
+                                    ">¿Olvidaste tu contraseña? <a href="{{ route('password.request') }}" class="text-dark">Resetear</a></p>
+                                </div>
 
                                 @error('form.notmatch')
                                     <div class="alert alert-danger alert-dismissible fade show" role="alert">

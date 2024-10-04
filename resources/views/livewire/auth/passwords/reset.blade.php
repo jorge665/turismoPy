@@ -37,7 +37,7 @@
                         @enderror
 
                         <button type="submit" class="btn btn-success w-100">
-                            Reset password
+                            Resetear Contraseña
                         </button>
 
                         @if (session()->has('message'))
@@ -57,10 +57,12 @@
 
                     </form>
 
-                    <div class="d-flex justify-content-between mt-4">
-                        <a class="" href="{{ route('login') }}">Login</a>
-                        <a class="" href="{{ route('register') }}">Register</a>
+                    <div class="text-center mt-3">
+                        <p class="text-muted
+                        ">¿No tienes una cuenta? <a href="{{ route('register') }}" class="text-dark">Registro</a></p>
                     </div>
+
+                    
                 </div>
             </div>
         </div>

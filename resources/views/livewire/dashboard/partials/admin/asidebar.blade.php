@@ -27,7 +27,7 @@
                         <a href="{{route('admin.dashboard')}}" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
-                                Widgets
+                                Tablero
                             </p>
                         </a>
                     </li>
@@ -35,7 +35,7 @@
                         <a href="{{route('profile')}}" class="nav-link">
                             <i class="nav-icon fas fa-id-card"></i>
                             <p>
-                                Profile
+                                Perfil
                             </p>
                         </a>
                     </li>
@@ -44,13 +44,13 @@
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-edit"></i>
                             <p>
-                                Forms
+                                Formularios
                                 <i class="fas fa-angle-left right"></i>
                             </p>
                         </a>
                         <ul class="nav nav-treeview" style="display: none;">
                             <li class="nav-item">
-                                <a href="pages/forms/general.html" class="nav-link">
+                                <a href="{{route('admin.user')}}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Usuarios</p>
                                 </a>
@@ -82,7 +82,25 @@
                             <li class="nav-item">
                                 <a href="pages/forms/validation.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
+                                    <p>Guias</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="pages/forms/validation.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
                                     <p>Noticias</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="pages/forms/validation.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Blogs</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="pages/forms/validation.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Reviews</p>
                                 </a>
                             </li>
                         </ul>

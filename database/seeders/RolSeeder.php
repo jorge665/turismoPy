@@ -15,15 +15,15 @@ class RolSeeder extends Seeder
     {
         $roles = [
             [
-                'name' => 'ADMIN',
+                'name' => 'admin',
                 'description' => 'Administrador del sistema, posee todos los permisos'
             ],
             [
-                'name' => 'USER',
+                'name' => 'user',
                 'description' => 'Usuario del sistema, posee permisos básicos para visualizar, comentar y crear contenido de contenido creado por el administrador o colaboradores'
             ],
             [
-                'name' => 'COLLABORATOR',
+                'name' => 'collaborator',
                 'description' => 'Colaborador del sistema, posee permisos para crear contenido y visualizar contenido creado por el administrador'
             ],
         ];

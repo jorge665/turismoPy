@@ -63,6 +63,18 @@
         </div>
         <div class="col-md-3 col-sm-6 col-12">
             <div class="info-box">
+                <span class="info-box-icon bg-danger"><i class="fas fa-list-ol"></i></span>
+
+                <div class="info-box-content">
+                    <span class="info-box-text">Guias</span>
+                    <span class="info-box-number">{{$guias}}</span>
+                </div>
+                <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+        </div>
+        <div class="col-md-3 col-sm-6 col-12">
+            <div class="info-box">
                 <span class="info-box-icon bg-secondary"><i class="far fa-sticky-note"></i></span>
 
                 <div class="info-box-content">
@@ -73,5 +85,33 @@
             </div>
             <!-- /.info-box -->
         </div>
+
+        <div class="col-md-3 col-sm-6 col-12">
+            <div class="info-box">
+                <span class="info-box-icon bg-info"> <i class="fab fa-microblog"></i></span>
+
+                <div class="info-box-content">
+                    <span class="info-box-text">Blogs</span>
+                    <span class="info-box-number">{{$blogs}}</span>
+                </div>
+                <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-12">
+            <div class="info-box">
+                <span class="info-box-icon bg-secondary"><i class="fas fa-star"></i></span>
+
+                <div class="info-box-content">
+                    <span class="info-box-text">Reviews</span>
+                    <span class="info-box-number">{{$reviews}}</span>
+                </div>
+                <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+        </div>
+
+       
     </div>
 </div>

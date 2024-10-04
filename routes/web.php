@@ -1,9 +1,11 @@
 <?php
 
-use App\Livewire\Admin\Dashboard;
 use App\Livewire\Auth\Login;
 use App\Livewire\Auth\Passwords\Reset;
 use App\Livewire\Auth\Register;
+use App\Livewire\Dashboard\Admin\Dashboard;
+use App\Livewire\Dashboard\Profile;
+use App\Livewire\Dashboard\User\Index;
 use App\Livewire\Home;
 use Illuminate\Support\Facades\Route;
 
@@ -36,13 +38,12 @@ Route::middleware('auth')->group(function () {
         return redirect()->route('home');
     })->name('logout');
 
-    Route::get('/profile', function () {
-        return json_encode(['message' => 'Profile']);
-    })->name('profile');
+    Route::get('/profile', Profile::class)->name('profile');
 
     Route::middleware('role:admin')->group(function () {
         ##Admin Dashboard
-        Route::get('/admin/dashboard',  Dashboard::class)->name('admin.dashboard'); 
+        Route::get('/admin/dashboard',  Dashboard::class)->name('admin.dashboard');
+        Route::get('/admin/user', Index::class)->name('admin.user'); 
     });
 
     Route::middleware('role:collaborator')->group(function () {

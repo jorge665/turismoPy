@@ -48,20 +48,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        @livewire('partials.admin.asidebar')
+        @livewire('dashboard.partials.admin.asidebar')
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
-            <div class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1 class="m-0">Panel de Administración</h1>
-                        </div><!-- /.col -->
-                    </div><!-- /.row -->
-                </div><!-- /.container-fluid -->
-            </div>
+            @livewire('dashboard.partials.admin.header')
             <!-- /.content-header -->
 
             <!-- Main content -->
@@ -76,7 +68,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- /.content-wrapper -->
 
         <!-- Main Footer -->
-        @livewire('partials.admin.footer')
+        @livewire('dashboard.partials.admin.footer')
     </div>
     <!-- ./wrapper -->
 
