@@ -9,8 +9,8 @@ class Destination extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['city_id', 'latitude', 'longitude'];
-
+    protected $fillable = ['city_id', 'latitude', 'longitude', 'status'];
+    
     public function city()
     {
         return $this->belongsTo(City::class);
@@ -44,5 +44,10 @@ class Destination extends Model
     public function pointsOfInterest()
     {
         return $this->hasMany(PointOfInterest::class);
+    }
+
+    public function social_links()
+    {
+        return $this->hasMany(SocialLink::class);
     }
 }

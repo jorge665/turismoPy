@@ -24,7 +24,7 @@
                     <!-- Add icons to the links using the .nav-icon class
                    with font-awesome or any other icon font library -->
                     <li class="nav-item">
-                        <a href="{{route('admin.dashboard')}}" class="nav-link">
+                        <a href="{{ route('admin.dashboard') }}" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 Tablero
@@ -32,7 +32,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{route('profile')}}" class="nav-link">
+                        <a href="{{ route('profile') }}" class="nav-link">
                             <i class="nav-icon fas fa-id-card"></i>
                             <p>
                                 Perfil
@@ -49,14 +49,16 @@
                             </p>
                         </a>
                         <ul class="nav nav-treeview" style="display: none;">
+                            @if (Auth::user()->hasRole('admin'))
+                                <li class="nav-item">
+                                    <a href="{{ route('admin.user') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Usuarios</p>
+                                    </a>
+                                </li>
+                            @endif
                             <li class="nav-item">
-                                <a href="{{route('admin.user')}}" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Usuarios</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/forms/advanced.html" class="nav-link">
+                                <a href="{{route('collaborator.destination')}}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Destinos</p>
                                 </a>
@@ -107,7 +109,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="{{route('logout')}}" class="nav-link">                            
+                        <a href="{{ route('logout') }}" class="nav-link">
                             <i class="fas fa-sign-out-alt nav-icon"></i>
                             <p>
                                 Cerrar Sesión
