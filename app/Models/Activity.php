@@ -9,12 +9,7 @@ class Activity extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['destination_id', 'point_of_interest_id', 'duration', 'schedule', 'price'];
-
-    public function destination()
-    {
-        return $this->belongsTo(Destination::class);
-    }
+    protected $fillable = ['point_of_interest_id', 'duration', 'schedule', 'price'];
 
     public function pointOfInterest()
     {
@@ -31,7 +26,6 @@ class Activity extends Model
         return $this->belongsToMany(InterestType::class, 'activity_interest_type')
             ->using(ActivityInterestType::class);
     }
-
 
     public function reviews()
     {

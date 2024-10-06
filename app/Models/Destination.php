@@ -26,11 +26,6 @@ class Destination extends Model
         return $this->hasMany(DestinationMedia::class);
     }
 
-    public function activities()
-    {
-        return $this->hasMany(Activity::class);
-    }
-
     public function reviews()
     {
         return $this->morphMany(Review::class, 'reviewable');
