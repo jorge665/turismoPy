@@ -45,4 +45,9 @@ class Destination extends Model
     {
         return $this->hasMany(SocialLink::class);
     }
+
+    public function events()
+    {
+        return $this->hasMany(Event::class);
+    }
 }

@@ -64,9 +64,9 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/forms/editors.html" class="nav-link">
+                                <a href="pages/forms/validation.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Actividades</p>
+                                    <p>Eventos</p>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -76,15 +76,21 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/forms/validation.html" class="nav-link">
+                                <a href="pages/forms/editors.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Eventos</p>
+                                    <p>Actividades</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="pages/forms/validation.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Guias</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="pages/forms/validation.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Oficina Turismo</p>
                                 </a>
                             </li>
                             <li class="nav-item">
