@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Rol;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Spatie\Permission\Models\Role;
 
 class RolSeeder extends Seeder
 {
@@ -13,6 +14,10 @@ class RolSeeder extends Seeder
      */
     public function run(): void
     {
+        Role::create(['name' => 'admin']);
+        Role::create(['name' => 'collaborator']);
+        Role::create(['name' => 'user']);
+
         $roles = [
             [
                 'name' => 'admin',
