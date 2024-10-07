@@ -5,6 +5,7 @@ use App\Livewire\Auth\Passwords\Reset;
 use App\Livewire\Auth\Register;
 use App\Livewire\Dashboard\Admin\Dashboard;
 use App\Livewire\Dashboard\Destination\Index as DestinationIndex;
+use App\Livewire\Dashboard\Event\Index as EventIndex;
 use App\Livewire\Dashboard\Profile;
 use App\Livewire\Dashboard\User\Index;
 use App\Livewire\Home;
@@ -54,5 +55,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/profile', Profile::class)->name('profile');
 
         Route::get('/collaborator/destination', DestinationIndex::class)->name('collaborator.destination');
+
+        Route::get('/collaborator/event', EventIndex::class)->name('collaborator.event');
     });
 });

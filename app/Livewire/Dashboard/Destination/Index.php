@@ -88,6 +88,6 @@ class Index extends Component
     public function render()
     {
         return view('livewire.dashboard.destination.index')
-        ->layout('components.layouts.adminDash');;
+        ->layout('components.layouts.adminDash');
     }
 }

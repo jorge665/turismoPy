@@ -33,7 +33,7 @@ class destinationform extends Form
     #[Validate(['images.*' => 'image|max:5120'])]
     public $images = [];
 
-    #[Validate('required|url')]
+    #[Validate('nullable|url')]
     public $video;
 
     #[Validate('url|nullable')]
@@ -63,7 +63,6 @@ class destinationform extends Form
         'images.*.image' => 'Formato de imagen no válido',
         'images.*.max' => 'La imagen no puede ser mayor a 5MB',
 
-        'videos.required' => 'Por favor seleccione al menos un video',
         'videos.url' => 'Formato de video no válido',
 
         'social_link_facebook.url' => 'El enlace de facebook no es válido',
