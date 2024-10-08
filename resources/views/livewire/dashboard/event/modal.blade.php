@@ -4,7 +4,7 @@
             <div class="modal-content">
                 <form wire:submit="save">
                     <div class="modal-header">
-                        <h5 class="modal-title">{{ $form->event_id ? 'Editar Destino' : 'Crear Nuevo Destino' }}</h5>
+                        <h5 class="modal-title">{{ $form->event_id ? 'Editar Evento' : 'Crear Nuevo Evento' }}</h5>
                         <button type="button" class="btn-close" wire:click="closeModal" aria-label="Cerrar"></button>
                     </div>
                     <div class="modal-body">
